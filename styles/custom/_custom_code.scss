@@ -1,0 +1,283 @@
+//
+//Pland Custom Code file for Bootstrap 5.2.0
+//
+//Contents
+//--------
+//1. Globals
+//2. Newsletter
+//3. Navbar
+//4. Contact Form
+//5. Footer
+//6. Loader
+//7. Hamburger Icon Animation
+//8. Card Image
+
+//================================================
+//Globals
+//================================================
+
+.baskerville-font {
+  font-family: "Libre Baskerville", serif;
+}
+
+.oswald-font {
+  font-family: "Proxima Bold", sans-serif;
+}
+
+//Overide btn Font
+.btn {
+  font-family: "Proxima Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+button.btn {
+  background-color: $primary;
+  color: #000;
+  border-color: $primary;
+  --bs-btn-hover-border-color: $primary;
+  // &:hover {
+  //   background-color: #000;
+  //   color: $primary;
+  // }
+  :not(.btn-check) + &:hover,
+  &:first-child:hover {
+    background-color: #000;
+    color: $primary;
+    border-color: $primary;
+  }
+}
+
+.text-container {
+  max-width: 700px;
+}
+
+//================================================
+//Newsletter
+//================================================
+
+div.input-group input.newsletter-input {
+  border-radius: 0;
+  border-color: #000;
+}
+div div.input-group input.newsletter-submit.btn {
+  background-color: #000;
+  color: $primary;
+  border-radius: 0;
+  border-color: #000;
+  &:hover {
+    background-color: $primary;
+    color: #000;
+  }
+}
+
+//================================================
+//Navbar
+//================================================
+
+.navbar-nav > li > a.nav-link {
+  font-family: "Proxima Bold", sans-serif;
+  font-size: 25px;
+  //letter-spacing: 0.1em;
+  font-weight: 700;
+  &:hover {
+    color: #000;
+  }
+}
+
+//================================================
+//Contact Form
+//================================================
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+//================================================
+//Footer
+//================================================
+
+.opening-hours p,
+.opening-hours div,
+.opening-hours span {
+  display: table-cell;
+}
+
+.opening-hours-dots {
+  width: 98%;
+  border-bottom: 2px dotted #e1e1e1;
+  margin-bottom: 10px;
+  align-items: baseline;
+  position: relative;
+  top: -11px;
+}
+
+.opening-hours-time {
+  text-align: right;
+  vertical-align: baseline;
+  padding-left: 6px;
+}
+
+.opening-hours {
+  //text-transform: uppercase;
+  font-family: "Proxima", sans-serif;
+  display: table;
+  // font-size: 16px;
+  white-space: nowrap;
+  align-items: baseline;
+}
+
+.address-container {
+  font-family: "Libre Baskerville", serif;
+}
+
+.social-icon {
+  //background-color: inherit;
+  width: 3rem;
+  height: 3rem;
+  //border-radius: 50%;
+  //font-size: 1.5rem;
+  line-height: 7px;
+  text-align: center;
+  //color: $primary;
+  //background: #8f8f8f;
+  transition: all 0.35s ease-in-out;
+}
+.social-link {
+  color: #fff;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.copyright {
+  display: inline-block;
+}
+
+//================================================
+//Loader
+//================================================
+
+.loading-Wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 99999;
+}
+
+.loading-icon {
+  position: absolute;
+  //left: 50%;
+  //top: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 0px auto;
+  -webkit-animation: rotation 2s infinite linear;
+  -webkit-animation: rotation 2s infinite linear;
+  -o-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
+  //border: 6px solid rgba(0, 174, 239, 0.15);
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+//================================================
+//Hamburger Icon Animation
+//================================================
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}
+
+@mixin animate($attr, $time) {
+  -webkit-transition: $attr $time ease;
+  -moz-transition: $attr $time ease;
+  -ms-transition: $attr $time ease;
+  -o-transition: $attr $time ease;
+  transition: $attr $time ease;
+}
+
+.nav-icon {
+  //margin: 1em;
+  width: 2em;
+}
+
+.nav-icon div,
+.nav-icon:after,
+.nav-icon:before {
+  background-color: #000;
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  @include animate(all, 400ms);
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.x.nav-icon:before {
+  @include transform(translateY(12px) rotate(135deg));
+}
+
+.x.nav-icon:after {
+  @include transform(translateY(-12px) rotate(-135deg));
+}
+
+.x.nav-icon div {
+  @include transform(scale(0));
+}
+
+//================================================
+//Card Image
+//================================================
+
+//fixes the displaying aspect ratio of the image
+.card-img {
+  width: 100%;
+  object-fit: cover;
+}

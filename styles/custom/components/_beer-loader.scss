@@ -1,0 +1,250 @@
+//  https://codepen.io/HerrBertling/pen/EWVoPw
+//  https://twitter.com/herrbertling
+//  Beer Loader
+
+//================================================
+//Html Layout
+//================================================
+
+// <div class="wrapper">
+//   <div class="glass-wrapper">
+//     <div class="glass">
+//       <div class="beer">
+//         <div class="foam"><span class="foambubble"></span><span class="foambubble"></span><span class="foambubble"></span><span class="foambubble"></span><span class="foambubble"></span></div>
+//         <div class="bubbles"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></div>
+//       </div>
+//     </div>
+//     <div class="foamtop"><span class="ft-bubble"></span><span class="ft-bubble"></span><span class="ft-bubble"></span><span class="ft-bubble"></span></div>
+//     <div class="coaster"></div>
+//   </div>
+// </div>
+/
+//================================================
+//Beer Loader Code
+//================================================
+
+$glassHeight: 240px;
+$borderWidth: 8px;
+$animationDuration: 4000ms;
+$beerColor: gold;
+
+.wrapper {
+  background-color: #007575;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-wrapper {
+  position: relative;
+}
+
+.glass {
+  border: $borderWidth solid white;
+  border-bottom-width: $borderWidth * 2;
+  border-top: transparent;
+  border-radius: 0 0 $borderWidth/2 $borderWidth/2;
+  height: $glassHeight;
+  width: $glassHeight * 0.6;
+  transform: perspective($glassHeight) rotateX(-10deg);
+  position: relative;
+  overflow: hidden;
+}
+
+.beer {
+  height: 90%;
+  width: 100%;
+  background-color: $beerColor;
+  position: absolute;
+  bottom: 0;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  animation: beer-fill $animationDuration linear infinite;
+}
+
+.bubble {
+  display: inline-block;
+  width: $borderWidth;
+  height: $borderWidth;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: bubble-rise $animationDuration infinite;
+}
+
+.bubble:nth-child(1) {
+  left: 3.7%;
+  bottom: 0.4%;
+  animation-duration: $animationDuration - 140ms;
+  animation-delay: 140ms;
+}
+.bubble:nth-child(2) {
+  left: 51%;
+  bottom: 6.4%;
+  animation-duration: $animationDuration - 360ms;
+  animation-delay: 360ms;
+}
+.bubble:nth-child(3) {
+  left: 18%;
+  bottom: 1.4%;
+  animation-duration: $animationDuration - 60ms;
+  animation-delay: 60ms;
+}
+.bubble:nth-child(4) {
+  left: 83%;
+  bottom: 9.1%;
+  animation-duration: $animationDuration - 410ms;
+  animation-delay: 410ms;
+}
+.bubble:nth-child(5) {
+  left: 58%;
+  bottom: 14.7%;
+  animation-duration: $animationDuration - 70ms;
+  animation-delay: 70ms;
+}
+.bubble:nth-child(6) {
+  left: 13%;
+  bottom: 3.6%;
+  animation-duration: $animationDuration - 230ms;
+  animation-delay: 230ms;
+}
+.bubble:nth-child(7) {
+  left: 73%;
+  bottom: 0.4%;
+  animation-duration: $animationDuration - 100ms;
+  animation-delay: 100ms;
+}
+.bubble:nth-child(8) {
+  left: 41%;
+  bottom: 14.4%;
+  animation-duration: $animationDuration - 310ms;
+  animation-delay: 310ms;
+}
+.bubble:nth-child(9) {
+  left: 35%;
+  bottom: 0.4%;
+  animation-duration: $animationDuration;
+}
+
+.foambubble {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: -15px;
+  z-index: 2;
+}
+
+.foambubble:nth-child(1) {
+  left: -21%;
+}
+.foambubble:nth-child(2) {
+  left: 3%;
+}
+.foambubble:nth-child(3) {
+  left: 18%;
+}
+.foambubble:nth-child(4) {
+  left: 37%;
+}
+.foambubble:nth-child(5) {
+  left: 65%;
+}
+
+.foamtop {
+  position: absolute;
+  z-index: 2;
+  top: -35px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  animation: ftbubble-appear 4s infinite;
+}
+.ft-bubble {
+  display: inline-block;
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+}
+
+.ft-bubble:nth-child(1) {
+  left: -12%;
+}
+.ft-bubble:nth-child(2) {
+  left: 13%;
+}
+.ft-bubble:nth-child(3) {
+  left: 43%;
+}
+.ft-bubble:nth-child(4) {
+  left: 57%;
+}
+
+.coaster {
+  height: $borderWidth * 2;
+  width: 120%;
+  margin-left: -10%;
+  margin-top: -10%;
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+@keyframes beer-fill {
+  0% {
+    transform: scaleY(0);
+  }
+  48%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes bubble-rise {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  85% {
+    opacity: 1;
+    transform: translate3d(0, -1920%, 0);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translate3d(0, -1870%, 0);
+  }
+}
+
+@keyframes ftbubble-appear {
+  0%,
+  40% {
+    opacity: 0;
+    transform: translateY(35px) scale3d(0, 0, 0);
+  }
+  42% {
+    opacity: 0;
+    transform: translateY(27px) scale3d(0.4, 0, 0);
+  }
+  67%,
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale3d(1, 1, 0);
+  }
+}
+
+.disclaimer {
+  color: white;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  position: fixed;
+  bottom: 0;
+  a {
+    color: white;
+  }
+}
