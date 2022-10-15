@@ -4,17 +4,17 @@ import { useState } from "react";
 //import Image from "next/image";
 //import Gallery from "../components/Gallery";
 
-export default function Gallery({ feed }) {
+export default function Gallery() {
   //const images = feed.data;
-  let [numOfImages, setNumOfImages] = useState(9);
+  // let [numOfImages, setNumOfImages] = useState(9);
 
-  const loadClick = () => {
-    setNumOfImages(numOfImages + 6);
-  };
+  // const loadClick = () => {
+  //   setNumOfImages(numOfImages + 6);
+  // };
 
-  const arr = feed.data.filter((item) => item.media_type === "IMAGE");
-  //console.log(arr);
-  const images = arr.splice(0, numOfImages);
+  // const arr = feed.data.filter((item) => item.media_type === "IMAGE");
+  // //console.log(arr);
+  // const images = arr.splice(0, numOfImages);
 
   return (
     <>
@@ -30,7 +30,7 @@ export default function Gallery({ feed }) {
       </div>
       <div className="container mt-4">
         <div className="row">
-          {images &&
+          {/* {images &&
             images.map((image) => (
               <div key={image.id} className="col-md-4">
                 <a
@@ -49,32 +49,32 @@ export default function Gallery({ feed }) {
                   />
                 </a>
               </div>
-            ))}
+            ))} */}
         </div>
       </div>
-      <div className="d-flex justify-content-center mt-2 mb-4">
+      {/* <div className="d-flex justify-content-center mt-2 mb-4">
         <button className="btn me-2" onClick={loadClick}>
           Load more
         </button>
         <a href="https://www.instagram.com/theanchordigbeth1797/">
           <button className="btn">go to instagram</button>
         </a>
-      </div>
+      </div> */}
     </>
   );
 }
 
 // ${process.env.INSTAGRAM_KEY}
 
-export const getStaticProps = async () => {
-  const apiUrl = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const data = await fetch(apiUrl);
-  const feed = await data.json();
+// export const getStaticProps = async () => {
+//   const apiUrl = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
+//   const data = await fetch(apiUrl);
+//   const feed = await data.json();
 
-  return {
-    props: {
-      feed,
-    },
-    revalidate: 3600,
-  };
-};
+//   return {
+//     props: {
+//       feed,
+//     },
+//     revalidate: 3600,
+//   };
+// };
