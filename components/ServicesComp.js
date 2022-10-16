@@ -45,7 +45,7 @@ export default function ServicesComp() {
                       alt="..."
                     />
                     <div className="card-body">
-                      <h5 className="card-title">{service.name}</h5>
+                      <p className="h3 card-title">{service.name}</p>
                       <p className="card-text">{service.description}</p>
                       <a href="#" className="btn btn-primary">
                         Go somewhere
