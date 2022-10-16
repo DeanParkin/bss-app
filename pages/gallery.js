@@ -27,8 +27,8 @@ export default function Gallery() {
       </div> */}
       <div className="container text-center pt-3">
         <h2 className="h2 text-primary baskerville-font">Gallery</h2>
+        <p className="text-light">need instagram account</p>
       </div>
-      <p className="text-light">need instagram account</p>
       <div className="container mt-4">
         <div className="row">
           {/* {images &&

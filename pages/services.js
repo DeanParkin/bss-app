@@ -1,7 +1,7 @@
 import ServicesComp from "../components/ServicesComp";
 import SEO from "../components/SEO";
 
-export default function services() {
+export default function Services() {
   return (
     <>
       <SEO
