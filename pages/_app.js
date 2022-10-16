@@ -75,7 +75,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* <PageLoading /> */}
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-H9Q4C999HC"
       />
@@ -88,7 +88,7 @@ function MyApp({ Component, pageProps }) {
           gtag('config', 'G-H9Q4C999HC');`}
       </Script>
 
-      <SiteLoader />
+      <SiteLoader /> */}
       <Nav>
         <Component {...pageProps} />
       </Nav>
