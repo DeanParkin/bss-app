@@ -1,4 +1,24 @@
 export default function ServicesComp() {
+  const serviceList = [
+    {
+      name: "Service 1",
+      description:
+        "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      image: "",
+    },
+    {
+      name: "Service 2",
+      description:
+        "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      image: "",
+    },
+    {
+      name: "Service 3",
+      description:
+        "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      image: "",
+    },
+  ];
   return (
     <>
       <div className="container text-light text-center pt-3 mb-2">

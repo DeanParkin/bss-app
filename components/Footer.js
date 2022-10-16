@@ -81,7 +81,7 @@ export default function Footer() {
             <div className="copyright-container justify-content-center text-center fs-6">
               <p className="copyright mb-1">
                 <span className="text-light">
-                  &copy; 2020 - {new Date().getFullYear()} Bevington Security
+                  &copy; {new Date().getFullYear()} Bevington Security
                   Solutions. ALL RIGHTS RESERVED.
                 </span>
               </p>
