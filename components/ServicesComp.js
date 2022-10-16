@@ -1,22 +1,27 @@
+import image1 from "../public/imgs/bss-service-image-05.jpg";
+import image2 from "../public/imgs/bss-service-image-06.jpg";
+import image3 from "../public/imgs/bss-service-image-07.jpg";
+import Image from "next/image";
+
 export default function ServicesComp() {
   const serviceList = [
     {
       name: "Service 1",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      image: "",
+      image: image1,
     },
     {
       name: "Service 2",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      image: "",
+      image: image2,
     },
     {
       name: "Service 3",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      image: "",
+      image: image3,
     },
   ];
   return (
@@ -34,7 +39,11 @@ export default function ServicesComp() {
               <>
                 <div className="col-md-4 mb-3" key={service}>
                   <div className="card border-primary">
-                    {/* <img src="#" className="card-img-top" alt="..." /> */}
+                    <Image
+                      src={service.image}
+                      className="card-img-top"
+                      alt="..."
+                    />
                     <div className="card-body">
                       <h5 className="card-title">{service.name}</h5>
                       <p className="card-text">{service.description}</p>
