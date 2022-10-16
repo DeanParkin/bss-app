@@ -3,19 +3,19 @@ export default function ServicesComp() {
     {
       name: "Service 1",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the cards content.",
+        "Some quick example text to build on the card title and make up the bulk of the card's content.",
       image: "",
     },
     {
       name: "Service 2",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the cards content.",
+        "Some quick example text to build on the card title and make up the bulk of the card's content.",
       image: "",
     },
     {
       name: "Service 3",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the cards content.",
+        "Some quick example text to build on the card title and make up the bulk of the card's content.",
       image: "",
     },
   ];
@@ -29,51 +29,24 @@ export default function ServicesComp() {
           </p>
         </div>
         <div className="row text-dark">
-          <div className="col mb-3">
-            <div className="card border-primary">
-              <img src="#" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card&apos;s content.
-                </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col mb-3">
-            <div className="card border-primary">
-              <img src="#" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card&apos;s content.
-                </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col mb-3">
-            <div className="card border-primary">
-              <img src="#" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card&apos;s content.
-                </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
-          </div>
+          {serviceList.map((service) => {
+            return (
+              <>
+                <div className="col-md-4 mb-3" key={service}>
+                  <div className="card border-primary">
+                    {/* <img src="#" className="card-img-top" alt="..." /> */}
+                    <div className="card-body">
+                      <h5 className="card-title">{service.name}</h5>
+                      <p className="card-text">{service.description}</p>
+                      <a href="#" className="btn btn-primary">
+                        Go somewhere
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
     </>
