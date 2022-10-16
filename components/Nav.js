@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import logo from "../public/imgs/bss-logo-web-03.png";
+import logo from "../public/imgs/bss-nav-logo-04-04.png";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 // TODO - add the navbar links
@@ -82,11 +82,11 @@ export default function Nav({ children }) {
               </span>
             </h1>
             <Link href="/">
-              <div style={{ width: "125px", height: "60px" }}>
+              <div style={{ width: "150px", height: "60px" }}>
                 <Image
                   src={logo}
                   alt="BSS Logo"
-                  width={250}
+                  width={300}
                   height={120}
                   className="navbar-brand"
                   priority={true}

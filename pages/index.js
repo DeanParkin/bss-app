@@ -1,12 +1,8 @@
 import Carousel from "../components/Carousel";
-import Drinks from "../components/Drinks";
-import Events from "../components/Events";
 import ContactForm from "../components/ContactForm";
 import SEO from "../components/SEO";
-import GiftCard from "../components/GiftCard";
 import ServicesComp from "../components/ServicesComp";
 import { useState } from "react";
-import Image from "next/image";
 
 export default function Home({ feed }) {
   // let [numOfImages, setNumOfImages] = useState(6);
@@ -25,7 +21,7 @@ export default function Home({ feed }) {
         title="Home"
         description="A formal friendly door security Firm, aimed to raise the standard in the security industry."
       />
-      <Carousel />
+      {/* <Carousel /> */}
       <header className="text-light text-center container pt-3">
         <h2 className="fs-5 baskerville-font">
           Welcome To <br />
