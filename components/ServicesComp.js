@@ -6,19 +6,19 @@ import Image from "next/image";
 export default function ServicesComp() {
   const serviceList = [
     {
-      name: "Service 1",
+      name: "Erogenous Fisting",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
       image: image1,
     },
     {
-      name: "Service 2",
+      name: "Feisty Fondling",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
       image: image2,
     },
     {
-      name: "Service 3",
+      name: "The Supreme Special",
       description:
         "Some quick example text to build on the card title and make up the bulk of the card's content.",
       image: image3,
@@ -48,7 +48,7 @@ export default function ServicesComp() {
                       <p className="h3 card-title">{service.name}</p>
                       <p className="card-text">{service.description}</p>
                       <a href="#" className="btn btn-primary">
-                        Go somewhere
+                        Details
                       </a>
                     </div>
                   </div>
