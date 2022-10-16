@@ -37,7 +37,7 @@ export default function ServicesComp() {
           {serviceList.map((service) => {
             return (
               <>
-                <div className="col-md-4 mb-3" key={service}>
+                <div className="col-md-6 col-lg-4 mb-3" key={service}>
                   <div className="card border-primary">
                     <Image
                       src={service.image}
