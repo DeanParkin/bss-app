@@ -7,7 +7,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact"
-        description="If you would like to ask a question or book a table, then get in touch with us."
+        description="A formal friendly door security Firm, aimed to raise the standard in the security industry."
       />
       <ContactForm />
     </>

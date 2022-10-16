@@ -3,7 +3,7 @@ import Head from "next/dist/shared/lib/head";
 import Script from "next/script";
 
 const SEO = ({ title, description }) => {
-  const siteTitle = `The Anchor, Digbeth`;
+  const siteTitle = `BSS Security`;
   const pageTitle = `${siteTitle} | ${title}`;
   return (
     <>
