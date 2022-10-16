@@ -11,19 +11,13 @@ export default function Footer() {
   const socialIcons = [
     {
       name: "facebook link",
-      href: "https://www.facebook.com/TheAnchorDigbeth/",
+      href: "https://www.facebook.com/BevingtonSolutions",
       faIcon: faFacebook,
     },
     {
       name: "instagram link",
-      href: "https://www.instagram.com/theanchordigbeth1797",
+      href: "#",
       faIcon: faInstagramSquare,
-    },
-
-    {
-      name: "twitter link",
-      href: "https://twitter.com/anchordigbeth",
-      faIcon: faTwitter,
     },
   ];
   const router = useRouter();
