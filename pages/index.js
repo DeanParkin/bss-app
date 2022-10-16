@@ -25,11 +25,8 @@ export default function Home({ feed }) {
       <header className="text-light text-center container pt-3">
         <h2 className="fs-5 baskerville-font">
           Welcome To <br />
-          <span className="h2 text-primary">Bevington Security Solutions</span>
+          <span className="h1 text-primary">Bevington Security Solutions</span>
         </h2>
-        <div className="d-flex justify-content-center">
-          <p className="h2 text-primary baskerville-font"></p>
-        </div>
         <div className="d-flex justify-content-center">
           <p className="my-2 text-container">
             A formal friendly door security Firm, aimed to raise the standard in
