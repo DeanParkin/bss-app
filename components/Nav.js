@@ -13,6 +13,8 @@ export default function Nav({ children }) {
 
   const [navOpen, setNavOpen] = useState(false);
 
+  const ImageCss = { maxWidth: "100%", height: "auto" };
+
   const navItems = [
     { name: "home", href: "/" },
     { name: "gallery", href: "/gallery" },
@@ -86,8 +88,7 @@ export default function Nav({ children }) {
                 <Image
                   src={logo}
                   alt="BSS Logo"
-                  width={300}
-                  height={120}
+                  style={ImageCss}
                   className="navbar-brand"
                   priority={true}
                 />
@@ -119,15 +120,12 @@ export default function Nav({ children }) {
                     : { class: "nav-link" };
                 return (
                   <li className="nav-item me-2" key={link.name}>
-                    <Link href={link.href}>
-                      <a
-                        className={activeClass.class}
-                        onClick={linkClick}
-                        //aria-current={home.aria}
-                        //aria-current="page"
-                      >
-                        {link.name}
-                      </a>
+                    <Link
+                      href={link.href}
+                      className={activeClass.class}
+                      onClick={linkClick}
+                    >
+                      {link.name}
                     </Link>
                   </li>
                 );

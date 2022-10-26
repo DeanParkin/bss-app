@@ -1,3 +1,4 @@
+import React from "react";
 import image1 from "../public/imgs/bss-service-image-05.jpg";
 import image2 from "../public/imgs/bss-service-image-06.jpg";
 import image3 from "../public/imgs/bss-service-image-07.jpg";
@@ -24,6 +25,9 @@ export default function ServicesComp() {
       image: image3,
     },
   ];
+
+  const ImageCss = { maxWidth: "100%", height: "auto" };
+
   return (
     <>
       <div className="container text-light text-center pt-3 mb-2">
@@ -34,15 +38,16 @@ export default function ServicesComp() {
           </p>
         </div>
         <div className="row text-dark">
-          {serviceList.map((service) => {
+          {serviceList.map((service, key) => {
             return (
-              <>
+              <React.Fragment key={key}>
                 <div className="col-md-6 col-lg-4 mb-3" key={service}>
                   <div className="card border-primary">
                     <Image
                       src={service.image}
                       className="card-img-top"
                       alt="..."
+                      style={ImageCss}
                     />
                     <div className="card-body">
                       <p className="h3 card-title">{service.name}</p>
@@ -53,7 +58,7 @@ export default function ServicesComp() {
                     </div>
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             );
           })}
         </div>

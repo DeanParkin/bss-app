@@ -1,3 +1,4 @@
+import React from "react";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,18 +9,6 @@ import {
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
-  const socialIcons = [
-    {
-      name: "facebook link",
-      href: "https://www.facebook.com/BevingtonSolutions",
-      faIcon: faFacebook,
-    },
-    {
-      name: "instagram link",
-      href: "#",
-      faIcon: faInstagramSquare,
-    },
-  ];
   const router = useRouter();
   let url = `${router.asPath}`;
 
@@ -37,14 +26,35 @@ export default function Footer() {
     }
   };
 
+  const socialIcons = [
+    {
+      name: "facebook link",
+      href: "#",
+      faIcon: faFacebook,
+      key: 321,
+    },
+    {
+      name: "instagram link",
+      href: "#",
+      faIcon: faInstagramSquare,
+      key: 322,
+    },
+    {
+      name: "twitter link",
+      href: "#",
+      faIcon: faTwitter,
+      key: 323,
+    },
+  ];
+
   return (
     <>
       <footer className="mt-3">
         <div className="social-container border-top border-primary">
           <div className="container d-flex justify-content-around fs-3 align-items-center py-4">
-            {socialIcons.map((icon) => {
+            {socialIcons.map((icon, key) => {
               return (
-                <>
+                <React.Fragment key={key}>
                   <a
                     href={icon.href}
                     target="_blank"
@@ -58,7 +68,7 @@ export default function Footer() {
                       size="sm"
                     ></FontAwesomeIcon>
                   </a>
-                </>
+                </React.Fragment>
               );
             })}
             <div

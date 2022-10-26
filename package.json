@@ -6,6 +6,7 @@
   "author": "Dean Parkin <deanparkin@live.com> (https://github.com/DeanParkin/)",
   "scripts": {
     "dev": "next dev",
+    "turbo": "next dev --turbo --show-all",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -17,7 +18,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.1.2",
     "bootstrap": "^5.2.1",
-    "next": "^12.0.10",
+    "next": "^13.0.0",
     "nodemailer": "^6.7.7",
     "react": "18.2.0",
     "react-cookie-consent": "^8.0.1",
@@ -27,6 +28,6 @@
   },
   "devDependencies": {
     "eslint": "^8.20.0",
-    "eslint-config-next": "^12.2.3"
+    "eslint-config-next": "^13.0.0"
   }
 }
