@@ -48,6 +48,7 @@ export default function ServicesComp() {
                       className="card-img-top"
                       alt="..."
                       style={ImageCss}
+                      
                     />
                     <div className="card-body">
                       <p className="h3 card-title">{service.name}</p>

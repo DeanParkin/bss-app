@@ -11,6 +11,7 @@
 //6. Loader
 //7. Hamburger Icon Animation
 //8. Card Image
+//9. Associates list
 
 //================================================
 //Globals
@@ -280,4 +281,64 @@ div div.input-group input.newsletter-submit.btn {
 .card-img {
   width: 100%;
   object-fit: cover;
+}
+
+//================================================
+//Associates List
+//================================================
+
+.assoc-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.slider {
+  height: 200px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(200px * 16);
+  animation: scroll 40s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8));
+  }
+}
+
+.slide {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  & img {
+    transition: transform 1s;
+    &:hover {
+      transform: translateZ(20px);
+    }
+  }
+}
+
+.assoc-img {
+  transition: transform 1s;
+}
+
+.assoc-img:hover {
+  transform: translateZ(20px);
 }

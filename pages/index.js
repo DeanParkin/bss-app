@@ -1,4 +1,3 @@
-import Carousel from "../components/Carousel";
 import ContactForm from "../components/ContactForm";
 import SEO from "../components/SEO";
 import ServicesComp from "../components/ServicesComp";

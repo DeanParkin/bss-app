@@ -17,9 +17,9 @@ export default function Nav({ children }) {
 
   const navItems = [
     { name: "home", href: "/" },
-    { name: "gallery", href: "/gallery" },
     { name: "services", href: "/services" },
     { name: "contact", href: "/contact" },
+    { name: "careers", href: "/careers" },
   ];
 
   useEffect(() => {
@@ -83,13 +83,13 @@ export default function Nav({ children }) {
                 Bevington Security Solutions, Birmingham
               </span>
             </h1>
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <div style={{ width: "150px", height: "60px" }}>
                 <Image
                   src={logo}
                   alt="BSS Logo"
                   style={ImageCss}
-                  className="navbar-brand"
+                  className="navbar-brand py-0"
                   priority={true}
                 />
               </div>
@@ -112,14 +112,14 @@ export default function Nav({ children }) {
           </button>
           <div className="collapse navbar-collapse" id="navbarToggler">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase">
-              {navItems.map((link) => {
+              {navItems.map((link, key) => {
                 let x = link.href.slice(1);
                 let activeClass =
                   x == route
                     ? { class: "nav-link active" }
                     : { class: "nav-link" };
                 return (
-                  <li className="nav-item me-2" key={link.name}>
+                  <li className="nav-item me-2" key={key}>
                     <Link
                       href={link.href}
                       className={activeClass.class}

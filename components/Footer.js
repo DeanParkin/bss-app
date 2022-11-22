@@ -7,6 +7,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import Associates from "../components/Associates";
 
 export default function Footer() {
   const router = useRouter();
@@ -50,6 +51,7 @@ export default function Footer() {
   return (
     <>
       <footer className="mt-3">
+        <Associates />
         <div className="social-container border-top border-primary">
           <div className="container d-flex justify-content-around fs-3 align-items-center py-4">
             {socialIcons.map((icon, key) => {
