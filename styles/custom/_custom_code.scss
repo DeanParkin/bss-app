@@ -328,7 +328,7 @@ div div.input-group input.newsletter-submit.btn {
   align-items: center;
   padding: 15px;
   perspective: 100px;
-  & img {
+  & a {
     transition: transform 1s;
     &:hover {
       transform: translateZ(20px);

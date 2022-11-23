@@ -62,20 +62,40 @@ export default function Associates() {
             {associateList.map((assoc, key) => {
               return (
                 <div className="slide" key={key}>
-                  <Image src={assoc.image} alt={assoc.name} style={imageCss} />
+                  <a
+                    href={assoc.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`link to ${assoc.name} page`}
+                  >
+                    <Image
+                      src={assoc.image}
+                      alt={assoc.name}
+                      style={imageCss}
+                      className="assoc-img"
+                      priority={true}
+                    />
+                  </a>
                 </div>
               );
             })}
             {associateList.map((assoc, key) => {
               return (
                 <div className="slide" key={key}>
-                  <Image
-                    src={assoc.image}
-                    alt={assoc.name}
-                    style={imageCss}
-                    className="assoc-img"
-                    priority={true}
-                  />
+                  <a
+                    href={assoc.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`link to ${assoc.name} page`}
+                  >
+                    <Image
+                      src={assoc.image}
+                      alt={assoc.name}
+                      style={imageCss}
+                      className="assoc-img"
+                      priority={true}
+                    />
+                  </a>
                 </div>
               );
             })}
