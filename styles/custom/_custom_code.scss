@@ -305,8 +305,8 @@ div div.input-group input.newsletter-submit.btn {
 .slide-track {
   display: flex;
   width: calc(200px * 16);
-  animation: scroll 40s linear infinite;
-  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 30s linear infinite;
+  -webkit-animation: scroll 30s linear infinite;
   &:hover {
     animation-play-state: paused;
   }

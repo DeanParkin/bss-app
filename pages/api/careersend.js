@@ -2,13 +2,7 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-  const {
-    giftContactName,
-    giftContactEmail,
-    giftContactMessage,
-    amount,
-    giftContactPhoneNumber,
-  } = req.body;
+  const { careerName, careerEmail, careerMessage, careerTelephone } = req.body;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
