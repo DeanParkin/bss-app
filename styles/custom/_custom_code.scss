@@ -293,7 +293,7 @@ div div.input-group input.newsletter-submit.btn {
 }
 
 .slider {
-  height: 200px;
+  height: 250px;
   margin: auto;
   position: relative;
   width: 90%;
@@ -306,6 +306,7 @@ div div.input-group input.newsletter-submit.btn {
   display: flex;
   width: calc(200px * 16);
   animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
   &:hover {
     animation-play-state: paused;
   }
@@ -316,7 +317,7 @@ div div.input-group input.newsletter-submit.btn {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 8));
+    transform: translateX(calc(-200px * 8));
   }
 }
 

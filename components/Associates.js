@@ -74,6 +74,7 @@ export default function Associates() {
                     alt={assoc.name}
                     style={imageCss}
                     className="assoc-img"
+                    priority={true}
                   />
                 </div>
               );
