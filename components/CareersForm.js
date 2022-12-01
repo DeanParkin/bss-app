@@ -167,6 +167,16 @@ export default function CareersForm() {
               {errors?.careerCV?.message}
             </span>
           </div>
+          <div className="form-group">
+            <label htmlFor="message">Message (optional)</label>
+            <textarea
+              className="form-control"
+              id="message"
+              rows="3"
+              placeholder="Leave a message here"
+              {...register("careerMessage")}
+            ></textarea>
+          </div>
           <div className="justify-content-end d-flex d-grid">
             <button type="submit" className="btn mt-2">
               Submit

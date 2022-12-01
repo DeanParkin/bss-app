@@ -57,11 +57,11 @@ export default function Associates() {
   return (
     <>
       <div className="assoc-wrapper">
-        <div className="slider">
-          <div className="slide-track">
+        <div className="assoc-slider">
+          <div className="assoc-slide-track">
             {associateList.map((assoc, key) => {
               return (
-                <div className="slide" key={key}>
+                <div className="assoc-slides" key={key}>
                   <a
                     href={assoc.link}
                     target="_blank"
@@ -81,7 +81,7 @@ export default function Associates() {
             })}
             {associateList.map((assoc, key) => {
               return (
-                <div className="slide" key={key}>
+                <div className="assoc-slides" key={key}>
                   <a
                     href={assoc.link}
                     target="_blank"

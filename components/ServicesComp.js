@@ -27,7 +27,7 @@ export default function ServicesComp() {
     {
       name: "CCTV Monitoring",
       description:
-        "Our specialised CCTV security team will monitor each camera closely for your reassurance so that any suspicious activity won’t be missed or ignored.",
+        "Our specialist CCTV security team will monitor each camera closely for your reassurance so that any suspicious activity won’t be missed or ignored.",
       image: image3,
     },
   ];
@@ -40,9 +40,8 @@ export default function ServicesComp() {
         <h2 className="h2 text-primary baskerville-font">Services</h2>
         <div className="d-flex justify-content-center">
           <p className="text-container">
-            We offer a range of commercial and domestic solutions, to
-            everybody&apos;s safety. here are a few examples of what we can
-            offer:
+            We offer a range of commercial and domestic solutions, to suit
+            various requirements. here are a few examples of what we can offer.
           </p>
         </div>
         <div className="row text-dark">

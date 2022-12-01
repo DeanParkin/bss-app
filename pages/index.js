@@ -2,6 +2,9 @@ import ContactForm from "../components/ContactForm";
 import SEO from "../components/SEO";
 import ServicesComp from "../components/ServicesComp";
 import { useState } from "react";
+import Image from "next/image";
+import heroImage from "../public/imgs/bss-hero.jpg";
+import Carousel from "../components/Carousel";
 
 export default function Home({ feed }) {
   // let [numOfImages, setNumOfImages] = useState(6);
@@ -14,6 +17,11 @@ export default function Home({ feed }) {
   // //console.log(arr);
   // const images = arr.splice(0, numOfImages);
 
+  const ImageCss = {
+    maxWidth: "100%",
+    height: "auto",
+    //width: "100vw",
+  };
   return (
     <div>
       <SEO
@@ -21,17 +29,16 @@ export default function Home({ feed }) {
         description="A formal friendly door security Firm, aimed to raise the standard in the security industry."
       />
       {/* <Carousel /> */}
-      <header className="text-light text-center container pt-3">
+      <header className="text-light text-center my-5">
         <h2 className="fs-5 baskerville-font">
           Welcome To <br />
           <span className="h1 text-primary">Bevington Security Solutions</span>
         </h2>
-        <div className="d-flex justify-content-center">
-          <p className="my-2 text-container">
-            A formal friendly door security Firm, aimed to raise the standard in
-            the security industry.
-          </p>
-        </div>
+
+        <p className="my-2">
+          A formal friendly door security Firm, aimed to raise the standard in
+          the security industry.
+        </p>
       </header>
       <main>
         <section>

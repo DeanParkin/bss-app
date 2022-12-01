@@ -292,7 +292,7 @@ div div.input-group input.newsletter-submit.btn {
   place-items: center;
 }
 
-.slider {
+.assoc-slider {
   height: 250px;
   margin: auto;
   position: relative;
@@ -302,7 +302,7 @@ div div.input-group input.newsletter-submit.btn {
   overflow: hidden;
 }
 
-.slide-track {
+.assoc-slide-track {
   display: flex;
   width: calc(200px * 16);
   animation: scroll 30s linear infinite;
@@ -321,7 +321,7 @@ div div.input-group input.newsletter-submit.btn {
   }
 }
 
-.slide {
+.assoc-slides {
   height: 200px;
   width: 200px;
   display: flex;
@@ -342,4 +342,30 @@ div div.input-group input.newsletter-submit.btn {
 
 .assoc-img:hover {
   transform: translateZ(20px);
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-wrapper {
+  z-index: -1;
+  position: absolute;
+  height: 90vh;
+
+  & img {
+    object-fit: cover;
+    opacity: 0.4;
+  }
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  padding-top: 50vh;
 }

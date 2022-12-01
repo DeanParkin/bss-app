@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import image1 from "../public/imgs/BEER-TAPS-2.webp";
-import image2 from "../public/imgs/EXTERIOR.webp";
-import image3 from "../public/imgs/OCTOPUS.webp";
+import image1 from "../public/imgs/bss-hero.jpg";
+import image2 from "../public/imgs/bss-service-image-05.jpg";
+import image3 from "../public/imgs/bss-service-image-06.jpg";
 
 let imageArray = [
   {
@@ -31,6 +31,12 @@ let imageArray = [
     className: "carousel-image",
   },
 ];
+
+const ImageCss = {
+  maxWidth: "100%",
+  height: "auto",
+  //width: "100vw",
+};
 
 const Carousel = () => {
   return (
@@ -67,43 +73,83 @@ const Carousel = () => {
             <Image
               src={image1}
               alt="The Anchor has a wide range of beer"
-              className="d-block w-100"
+              //className="d-block w-100"
               priority={true}
               placeholder="blur"
               // width={1350}
               // height={600}
               //objectFit="fill"
               //objectFit="cover"
-              layout="responsive"
+              style={ImageCss}
             />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 className="fs-5 baskerville-font">
+                Welcome To <br />
+                <span className="h1 text-primary">
+                  Bevington Security Solutions
+                </span>
+              </h2>
+
+              <p className="my-2">
+                A formal friendly door security Firm, aimed to raise the
+                standard in the security industry.
+              </p>
+            </div>
           </div>
           <div className="carousel-item">
             <Image
               src={image2}
               alt="Front exterior of the Anchor"
-              className="d-block w-100"
+              //className="d-block w-100"
               priority={true}
               //placeholder="blur"
               //objectFit="fill"
               //objectFit="cover"
-              layout="responsive"
+              style={ImageCss}
               // objectFit="cover"
             />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 className="fs-5 baskerville-font">
+                Welcome To <br />
+                <span className="h1 text-primary">
+                  Bevington Security Solutions
+                </span>
+              </h2>
+
+              <p className="my-2">
+                A formal friendly door security Firm, aimed to raise the
+                standard in the security industry.
+              </p>
+            </div>
             {/*<img src="..." className="d-block w-100" alt="...">*/}
           </div>
           <div className="carousel-item">
             <Image
               src={image3}
               alt="Octopus art in the Anchor courtyard"
-              className="d-block w-100"
+              //              className="d-block w-100"
               priority={true}
               //placeholder="blur"
               //objectFit="fill"
+              style={ImageCss}
 
-              layout="responsive"
               //objectFit="cover"
             />
             {/*<img src="..." className="d-block w-100" alt="...">*/}
+
+            <div class="carousel-caption d-none d-md-block">
+              <h2 className="fs-5 baskerville-font">
+                Welcome To <br />
+                <span className="h1 text-primary">
+                  Bevington Security Solutions
+                </span>
+              </h2>
+
+              <p className="my-2">
+                A formal friendly door security Firm, aimed to raise the
+                standard in the security industry.
+              </p>
+            </div>
           </div>
         </div>
         <button
