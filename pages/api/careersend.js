@@ -72,41 +72,36 @@ export default async function handler(req, res) {
 
     const filename = file?.originalFilename;
 
-    // here you'd pass all the fields and files to the nodemailer transport layer
-      var {
-        careerName,
-        careerEmail,
-        careerMessage,
-        careerTelephone,
-        careerBadge,
-        careerCV,
-      } = req.body;
+    const {
+      careerName,
+      careerEmail,
+      careerMessage,
+      careerTelephone,
+      careerBadge,
+      careerCV,
+    } = fields;
 
+    const attachments = [{ fileData, filename }];
+    console.log({ attachments, careerName });
 
-    const attachments = [{ content, filename }];
-
-      try {
-        const emailRes = await transporter.sendMail({
-          from: `${careerName} <${careerEmail}>`,
-          replyTo: `${careerName} <${careerEmail}>`,
-          to: "deanparkim1987@gmail.com",
-          subject: `Career Form Submission from ${careerName}`,
-          html: `<p>You have a new Career form submission</p><br>
+    const emailRes = await transporter.sendMail({
+      from: `${careerName} <${careerEmail}>`,
+      replyTo: `${careerName} <${careerEmail}>`,
+      to: "deanparkim1987@gmail.com",
+      subject: `Career Form Submission from ${careerName}`,
+      html: `<p>You have a new Career form submission</p><br>
           <p><strong>Name: </strong> ${careerName}</p><br>
           <p><strong>Email: </strong> ${careerEmail}</p><br>
           <p><strong>Phone Number: </strong> ${careerTelephone}</p><br>
           <p><strong>Badge Number: </strong> ${careerBadge}</p><br>
           <p><strong>Message: </strong> ${careerMessage}</p>`,
-          attachments: careerCV,
-        });
+      attachments: attachments,
+    });
     return res.status(204).end();
   } catch (err) {
     return res.status(500).json({ error: "Internal Server Error" });
   }
 }
-
-
-
 
 // import nodemailer from "nodemailer";
 // import multer from "multer";
@@ -188,7 +183,7 @@ export default async function handler(req, res) {
 //   // } catch (error) {
 //   //   console.error(error);
 //   // }
-
+//
 //   console.log(req.body);
 //   res.status(200).json(req.body);
 // }

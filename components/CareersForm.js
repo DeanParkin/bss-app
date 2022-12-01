@@ -17,8 +17,13 @@ export default function CareersForm() {
   } = useForm();
 
   async function onSubmitForm(data) {
-    //console.log(data);
-    //const formdata = new FormData(data);
+    console.log(data);
+
+    const formdata = new FormData();
+
+    Object.entries(data).forEach(([key, value]) => {
+      formdata.set(key, value);
+    });
     // formdata.append("careerName", careerName);
     // formdata.append("careerEmail", careerEmail);
     // formdata.append("careerPhone", careerPhone);
@@ -31,7 +36,7 @@ export default function CareersForm() {
       url: `${
         process.env.URL == "http://localhost:3000" ? process.env.URL : ""
       }/api/careersend`,
-      data: data,
+      data: formdata,
     };
 
     try {
