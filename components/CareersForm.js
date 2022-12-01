@@ -17,21 +17,29 @@ export default function CareersForm() {
   } = useForm();
 
   async function onSubmitForm(data) {
+    //console.log(data);
+    //const formdata = new FormData(data);
+    // formdata.append("careerName", careerName);
+    // formdata.append("careerEmail", careerEmail);
+    // formdata.append("careerPhone", careerPhone);
+    // formdata.append("careerBadge", careerBadge);
+    // formdata.append("careerCV", careerCV);
+    // formdata.append("careerMessage", careerMessage);
+
     let config = {
       method: "POST",
       url: `${
         process.env.URL == "http://localhost:3000" ? process.env.URL : ""
       }/api/careersend`,
-      headers: { "Content-Type": "application/json" },
       data: data,
     };
 
     try {
-      const response = await axios(config);
-      if (response.status === 200) {
+      const res = await axios(config);
+      if (res.status === 200) {
         console.log("Message was sent Successfully");
         messageSent = true;
-        reset();
+        //reset();
       }
     } catch (err) {
       console.error(err);
