@@ -22,7 +22,11 @@ export default function CareersForm() {
     const formdata = new FormData();
 
     Object.entries(data).forEach(([key, value]) => {
-      formdata.set(key, value);
+      if (key === "careerCV") {
+        formdata.set(key, value[0]);
+      } else {
+        formdata.set(key, value);
+      }
     });
     // formdata.append("careerName", careerName);
     // formdata.append("careerEmail", careerEmail);

@@ -64,25 +64,28 @@ export default async function handler(req, res) {
       fileWriteStreamHandler: () => fileConsumer(chunks),
     });
 
-    console.log(fields);
-    console.log(files);
-    const { file } = files;
+    console.log({ fields });
+    console.log({ files });
+    const { careerCV } = files;
 
     const fileData = Buffer.from(chunks);
 
-    const filename = file?.originalFilename;
+    const filename = careerCV?.originalFilename;
 
+    // here you'd pass all the fields and files to the nodemailer transport layer
     const {
       careerName,
       careerEmail,
       careerMessage,
       careerTelephone,
       careerBadge,
-      careerCV,
     } = fields;
 
     const attachments = [{ fileData, filename }];
-    console.log({ attachments, careerName });
+    console.log({
+      attachments,
+      careerName,
+    });
 
     const emailRes = await transporter.sendMail({
       from: `${careerName} <${careerEmail}>`,
