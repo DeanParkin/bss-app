@@ -81,7 +81,7 @@ export default function CareersForm() {
                 errors.careerName ? "border-danger" : ""
               }`}
               id="name"
-              placeholder="Enter name"
+              placeholder="Enter your name"
               {...register("careerName", {
                 required: { value: true, message: "Your Name is required" },
               })}
@@ -98,7 +98,7 @@ export default function CareersForm() {
                 errors.careerEmail ? "border-danger" : ""
               }`}
               id="email"
-              placeholder="Enter email"
+              placeholder="Enter your email"
               {...register("careerEmail", {
                 required: { value: true, message: "Your Email is required" },
                 pattern: {
@@ -119,7 +119,7 @@ export default function CareersForm() {
                 errors.careerTelephone ? "border-danger" : ""
               }`}
               id="telephone"
-              placeholder="Enter Phone Number"
+              placeholder="Enter your phone number"
               {...register("careerTelephone", {
                 required: {
                   value: true,
@@ -144,7 +144,7 @@ export default function CareersForm() {
                 errors.careerBadge ? "border-danger" : ""
               }`}
               id="badgeNumber"
-              placeholder="Enter Phone Number"
+              placeholder="Enter your badge number"
               {...register("careerBadge", {
                 required: {
                   value: true,
