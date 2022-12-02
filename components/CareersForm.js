@@ -17,7 +17,7 @@ export default function CareersForm() {
   } = useForm();
 
   async function onSubmitForm(data) {
-    console.log(data);
+    //console.log(data);
 
     const formdata = new FormData();
 

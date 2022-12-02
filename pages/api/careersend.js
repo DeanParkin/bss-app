@@ -64,11 +64,11 @@ export default async function handler(req, res) {
       fileWriteStreamHandler: () => fileConsumer(chunks),
     });
 
-    console.log({ fields });
-    console.log({ files });
+    //console.log({ fields });
+    //console.log({ files });
     const { careerCV } = files;
 
-    const fileData = Buffer.from(chunks);
+    const fileData = Buffer.concat(chunks);
 
     const filename = careerCV?.originalFilename;
 
@@ -81,7 +81,7 @@ export default async function handler(req, res) {
       careerBadge,
     } = fields;
 
-    const attachments = [{ fileData, filename }];
+    const attachments = [{ content: fileData, filename }];
     console.log({
       attachments,
       careerName,
@@ -100,7 +100,7 @@ export default async function handler(req, res) {
           <p><strong>Message: </strong> ${careerMessage}</p>`,
       attachments: attachments,
     });
-    return res.status(204).end();
+    return res.status(200).end();
   } catch (err) {
     return res.status(500).json({ error: "Internal Server Error" });
   }
