@@ -41,6 +41,7 @@ export default function CareersForm() {
         process.env.URL == "http://localhost:3000" ? process.env.URL : ""
       }/api/careersend`,
       data: formdata,
+      headers: { "Content-Type": "multipart/form-data" },
     };
 
     try {
