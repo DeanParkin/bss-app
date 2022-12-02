@@ -48,7 +48,7 @@ export default function CareersForm() {
       if (res.status === 200) {
         console.log("Message was sent Successfully");
         messageSent = true;
-        //reset();
+        reset();
       }
     } catch (err) {
       console.error(err);
