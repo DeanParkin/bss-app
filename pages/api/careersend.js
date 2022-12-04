@@ -100,6 +100,7 @@ export default async function handler(req, res) {
           <p><strong>Message: </strong> ${careerMessage}</p>`,
       attachments: attachments,
     });
+
     return res.status(200).end();
   } catch (err) {
     return res.status(500).json({ error: "Internal Server Error" });
