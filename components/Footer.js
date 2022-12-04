@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagramSquare,
-  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import Associates from "../components/Associates";
@@ -30,21 +29,15 @@ export default function Footer() {
   const socialIcons = [
     {
       name: "facebook link",
-      href: "#",
+      href: "https://www.facebook.com/BevingtonSolutions",
       faIcon: faFacebook,
       key: 321,
     },
     {
       name: "instagram link",
-      href: "#",
+      href: "https://www.instagram.com/bevingtonsecuritysolutions/",
       faIcon: faInstagramSquare,
       key: 322,
-    },
-    {
-      name: "twitter link",
-      href: "#",
-      faIcon: faTwitter,
-      key: 323,
     },
   ];
 
@@ -98,7 +91,7 @@ export default function Footer() {
                 </span>
               </p>
               <a
-                href="https://www.theanchordigbeth.co.uk/privacy-policy"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="privacy-policy-link px-3 mb-3"
@@ -106,7 +99,7 @@ export default function Footer() {
                 Privacy Policy
               </a>
               <a
-                href="https://www.theanchordigbeth.co.uk/privacy-policy"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="privacy-policy-link mb-3"
