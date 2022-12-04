@@ -89,7 +89,7 @@ export default async function handler(req, res) {
 
     //Email Transporter Settings
     const emailRes = await transporter.sendMail({
-      from: `"No-reply" <${careerEmail}>`,
+      from: "site@bevingtonsecurity.com",
       replyTo: `${careerName} <${careerEmail}>`,
       to: "deanparkin@live.co.uk",
       subject: `Career Form Submission from ${careerName}`,
