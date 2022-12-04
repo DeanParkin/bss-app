@@ -51,7 +51,7 @@ export default function Home({ feed }) {
             </p>
           </div>
         </div>
-        <div className="d-block d-xl-none">
+        <div className="d-block d-xl-none container">
           <h2 className="fs-5 baskerville-font">
             Welcome To <br />
             <span className="h1 text-primary">
