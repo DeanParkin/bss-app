@@ -12,9 +12,10 @@
 //7. Hamburger Icon Animation
 //8. Card Image
 //9. Associates list
+//10. Careers Form
 
 //================================================
-//Globals
+//1. Globals
 //================================================
 
 .baskerville-font {
@@ -25,7 +26,7 @@
   font-family: "Proxima Bold", sans-serif;
 }
 
-//Overide btn Font
+//Overrides btn Font
 .btn {
   font-family: "Proxima Bold", sans-serif;
   text-transform: uppercase;
@@ -53,7 +54,7 @@ button.btn {
 }
 
 //================================================
-//Newsletter
+//2. Newsletter
 //================================================
 
 div.input-group input.newsletter-input {
@@ -72,7 +73,7 @@ div div.input-group input.newsletter-submit.btn {
 }
 
 //================================================
-//Navbar
+//3. Navbar
 //================================================
 
 .navbar-nav > li > a.nav-link {
@@ -86,7 +87,7 @@ div div.input-group input.newsletter-submit.btn {
 }
 
 //================================================
-//Contact Form
+//4. Contact Form
 //================================================
 .contact-form {
   width: 100%;
@@ -95,7 +96,7 @@ div div.input-group input.newsletter-submit.btn {
 }
 
 //================================================
-//Footer
+//5. Footer
 //================================================
 
 .opening-hours p,
@@ -156,7 +157,7 @@ div div.input-group input.newsletter-submit.btn {
 }
 
 //================================================
-//Loader
+//6. Loader
 //================================================
 
 .loading-Wrapper {
@@ -221,7 +222,7 @@ div div.input-group input.newsletter-submit.btn {
 }
 
 //================================================
-//Hamburger Icon Animation
+//7. Hamburger Icon Animation
 //================================================
 
 @mixin transform($value) {
@@ -274,7 +275,7 @@ div div.input-group input.newsletter-submit.btn {
 }
 
 //================================================
-//Card Image
+//8. Card Image
 //================================================
 
 //fixes the displaying aspect ratio of the image
@@ -284,7 +285,7 @@ div div.input-group input.newsletter-submit.btn {
 }
 
 //================================================
-//Associates List
+//9. Associates List
 //================================================
 
 .assoc-wrapper {
@@ -344,28 +345,36 @@ div div.input-group input.newsletter-submit.btn {
   transform: translateZ(20px);
 }
 
-.hero-wrapper {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+//================================================
+//10. Careers Form
+//================================================
+
+input[type="file"]::-webkit-file-upload-button {
+  background: $primary;
+  color: black;
+}
+input[type="file"]:hover::-webkit-file-upload-button {
+  background: #000 !important;
+  color: $primary;
 }
 
-.image-wrapper {
-  z-index: -1;
+.hero-image {
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}
+
+.hero-text {
   position: absolute;
-  height: 90vh;
-
-  & img {
-    object-fit: cover;
-    opacity: 0.4;
-  }
+  right: (100% - $carousel-caption-width) * 0.5;
+  bottom: $carousel-caption-spacer;
+  left: (100% - $carousel-caption-width) * 0.5;
+  padding-top: $carousel-caption-padding-y;
+  padding-bottom: $carousel-caption-padding-y;
+  color: $carousel-caption-color;
+  text-align: center;
 }
 
-.hero-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 90vh;
-  padding-top: 50vh;
+.hero-wrapper {
+  margin-bottom: 20px;
 }
