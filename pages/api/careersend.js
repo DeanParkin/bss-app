@@ -82,10 +82,10 @@ export default async function handler(req, res) {
     } = fields;
 
     const attachments = [{ content: fileData, filename }];
-    console.log({
-      attachments,
-      careerName,
-    });
+    // console.log({
+    //   attachments,
+    //   careerName,
+    // });
 
     //Email Transporter Settings
     const emailRes = await transporter.sendMail({

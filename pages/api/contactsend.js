@@ -25,9 +25,9 @@ export default async function handler(req, res) {
       <p><strong>Email: </strong> ${contactEmail}</p><br>
       <p><strong>Message: </strong> ${contactMessage}</p>`,
     });
-    console.log("Message sent: %s", emailRes.messageId);
+    //console.log("Message sent: %s", emailRes.messageId);
   } catch (error) {
-    console.error(error);
+    //console.error(error);
   }
 
   console.log(req.body);

@@ -2,8 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-//import ContactForm from "../components/ContactForm";
-
 let messageSent = false;
 
 export default function ContactForm() {

@@ -1,10 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import DropZone from "./drag-and-drop/DropZone";
 import axios from "axios";
-import { useReducer } from "react";
-
-//import ContactForm from "../components/ContactForm";
 
 let messageSent = false;
 
@@ -28,12 +24,6 @@ export default function CareersForm() {
         formdata.set(key, value);
       }
     });
-    // formdata.append("careerName", careerName);
-    // formdata.append("careerEmail", careerEmail);
-    // formdata.append("careerPhone", careerPhone);
-    // formdata.append("careerBadge", careerBadge);
-    // formdata.append("careerCV", careerCV);
-    // formdata.append("careerMessage", careerMessage);
 
     let config = {
       method: "POST",

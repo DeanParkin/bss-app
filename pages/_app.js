@@ -1,69 +1,12 @@
-import { useState, useEffect } from "react";
-//import { useRouter } from "next/router";
+import { useEffect } from "react";
 import Nav from "../components/Nav";
 import Script from "next/script";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDharmachakra } from "@fortawesome/free-solid-svg-icons";
-
 import CookieConsent from "react-cookie-consent";
 import "../styles/main.scss";
 
 //TODO - Remove Debugging from cookie consent for production
 //TODO - update cookie consent date
 //TODO - add privacy policy link
-
-// //Loader Component for loading a page
-// function PageLoading() {
-//   const router = useRouter();
-//   const [loading, setLoading] = useState(false);
-
-//   useEffect(() => {
-//     const handleStart = (url) => url !== router.asPath && setLoading(true);
-
-//     const handleComplete = (url) =>
-//       url === router.asPath && setTimeout(() => setLoading(false), 100);
-
-//     router.events.on("routeChangeStart", handleStart);
-//     router.events.on("routeChangeComplete", handleComplete);
-//     router.events.on("routeChangeError", handleComplete);
-//     return () => {
-//       router.events.off("routeChangeStart", handleStart);
-//       router.events.off("routeChangeComplete", handleComplete);
-//       router.events.off("routeChangeError", handleComplete);
-//     };
-//   });
-
-//   return (
-//     loading && (
-//       <div className="loading-Wrapper">
-//         <div className="loading-icon">
-//           <FontAwesomeIcon icon={faDharmachakra} />
-//         </div>
-//       </div>
-//     )
-//   );
-// }
-
-//Loader Component for loading the site
-function SiteLoader() {
-  const [siteLoad, setSiteLoad] = useState(true);
-
-  useEffect(() => {
-    window.addEventListener("load", (e) => {
-      setTimeout(() => setSiteLoad(false), 1);
-    });
-  }, []);
-
-  return (
-    siteLoad && (
-      <div className="loading-Wrapper">
-        <div className="loading-icon">
-          <FontAwesomeIcon icon={faDharmachakra} className="text-primary" />
-        </div>
-      </div>
-    )
-  );
-}
 
 //Main App Component
 function MyApp({ Component, pageProps }) {
@@ -74,7 +17,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* <PageLoading /> */}
       <Script
         strategy="afterInteractive"
         async
@@ -88,8 +30,6 @@ function MyApp({ Component, pageProps }) {
 
           gtag('config', 'G-ZJ28BKFSLX');`}
       </Script>
-
-      {/* <SiteLoader /> */}
       <Nav>
         <Component {...pageProps} />
       </Nav>
