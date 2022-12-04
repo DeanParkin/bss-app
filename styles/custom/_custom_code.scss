@@ -361,7 +361,12 @@ input[type="file"]:hover::-webkit-file-upload-button {
 .hero-image {
   width: 100%;
   height: auto;
-  opacity: 0.6;
+}
+
+@include media-breakpoint-up(md) {
+  .hero-image {
+    opacity: 0.5;
+  }
 }
 
 .hero-text {
