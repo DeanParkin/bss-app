@@ -35,6 +35,7 @@ export default function Home({ feed }) {
             src={heroImage}
             alt="Bevington Security Door Team"
             className="hero-image"
+            priority
           />
           <div className="hero-text d-none d-md-block">
             <h2 className="fs-5 baskerville-font">
