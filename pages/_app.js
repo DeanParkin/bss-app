@@ -75,9 +75,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* <PageLoading /> */}
-      {/* <Script
+      <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-H9Q4C999HC"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-ZJ28BKFSLX"
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
@@ -85,10 +86,10 @@ function MyApp({ Component, pageProps }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-H9Q4C999HC');`}
+          gtag('config', 'G-ZJ28BKFSLX');`}
       </Script>
 
-      <SiteLoader /> */}
+      {/* <SiteLoader /> */}
       <Nav>
         <Component {...pageProps} />
       </Nav>
