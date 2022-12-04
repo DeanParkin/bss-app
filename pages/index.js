@@ -37,7 +37,7 @@ export default function Home({ feed }) {
             className="hero-image"
             priority
           />
-          <div className="hero-text d-none d-md-block">
+          <div className="hero-text d-none d-xl-block">
             <h2 className="fs-5 baskerville-font">
               Welcome To <br />
               <span className="h1 text-primary">
@@ -51,7 +51,7 @@ export default function Home({ feed }) {
             </p>
           </div>
         </div>
-        <div className="d-block d-md-none">
+        <div className="d-block d-xl-none">
           <h2 className="fs-5 baskerville-font">
             Welcome To <br />
             <span className="h1 text-primary">

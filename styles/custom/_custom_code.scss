@@ -371,12 +371,12 @@ input[type="file"]:hover::-webkit-file-upload-button {
 
 .hero-text {
   position: absolute;
-  right: (100% - $carousel-caption-width) * 0.5;
+  right: 1.25rem;
   bottom: $carousel-caption-spacer;
-  left: (100% - $carousel-caption-width) * 0.5;
-  padding-top: $carousel-caption-padding-y;
-  padding-bottom: $carousel-caption-padding-y;
-  color: $carousel-caption-color;
+  left: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  //color: $carousel-caption-color;
   text-align: center;
 }
 
