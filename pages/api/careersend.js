@@ -87,6 +87,7 @@ export default async function handler(req, res) {
       careerName,
     });
 
+    //Email Transporter Settings
     const emailRes = await transporter.sendMail({
       from: `${careerName} <${careerEmail}>`,
       replyTo: `${careerName} <${careerEmail}>`,
