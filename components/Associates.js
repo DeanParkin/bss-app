@@ -94,6 +94,9 @@ export default function Associates() {
                       style={imageCss}
                       className="assoc-img"
                       priority={true}
+                      sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
                     />
                   </a>
                 </div>
