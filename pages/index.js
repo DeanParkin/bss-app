@@ -34,7 +34,7 @@ export default function Home({ feed }) {
           <Image
             src={heroImage}
             alt="Bevington Security Door Team"
-            class="hero-image"
+            className="hero-image"
           />
           <div className="hero-text d-none d-md-block">
             <h2 className="fs-5 baskerville-font">
